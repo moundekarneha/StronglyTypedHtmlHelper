@@ -1,0 +1,45 @@
+﻿@using StronglyTypedHtmlHelper.Models
+@model Employee
+
+
+@{
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("MyForm"))
+        {
+
+            @Html.TextAreaFor(m => m.Name)<br />
+
+            @Html.TextAreaFor(m => m.Address)<br />
+
+            @Html.CheckBoxFor(m => m.isEmployee)<br />
+
+            <input type="submit" value="Submit" />
+        }
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br />
+
+
+    <div>
+        Name
+        @Html.TextAreaFor(m => m.Name)<br />
+        Address
+        @Html.TextAreaFor(m => m.Address)<br />
+        IsEmployee
+        @Html.CheckBoxFor(m => m.isEmployee)<br />
+    </div>
+</body>
+</html>
